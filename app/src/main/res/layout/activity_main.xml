@@ -6,39 +6,114 @@
     android:layout_height="match_parent"
     tools:context="com.example.nim.steptracker.MainActivity">
 
-    <Button
-        android:id="@+id/start"
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:text="Steps"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Time"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/stepsTaken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Start"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="252dp" />
+        android:layout_marginTop="72dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/timeTaken" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="252dp"
-        android:text="Stop"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/start"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
+    <TextView
+        android:id="@+id/timeTaken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:text="0.0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/distanceTravelled" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/restart"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/start" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Restart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        tools:layout_editor_absoluteY="252dp" />
+        app:layout_constraintStart_toEndOf="@+id/stop" />
+
+    <TextView
+        android:id="@+id/distanceTravelled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="0.0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:text="Distance"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
