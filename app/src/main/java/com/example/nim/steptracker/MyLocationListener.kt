@@ -37,6 +37,7 @@ class MyLocationListener(mainActivity: MainActivity) : LocationListener
                 distanceTravelled+=distance
                 Log.i("MYTAG", "adding distance" + distance.toString()+"m")
                 context.distanceTravelled.text=distanceTravelled.roundToInt().toString() +" m"
+                context.stepsTaken.text = (distanceTravelled.roundToInt() / (context.scalingFactor.progress/context.sseekBarSize)).toString()
 
             }
 
