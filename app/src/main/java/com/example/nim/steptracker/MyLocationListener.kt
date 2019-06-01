@@ -32,7 +32,7 @@ class MyLocationListener(mainActivity: MainActivity) : LocationListener
         {
             val distance = 1000*getDistance(initialLocation!!.latitude, initialLocation!!.longitude, location!!.latitude, location.longitude)
             initialLocation = Location(location)
-            if (context.running)
+            if (context.running && context.difference>1)
             {
                 distanceTravelled+=distance
                 Log.i("MYTAG", "adding distance" + distance.toString()+"m")
