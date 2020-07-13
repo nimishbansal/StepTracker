@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity()
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
+        val x=0
+        val y=0
+        print(x/y);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val locationManager:LocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
